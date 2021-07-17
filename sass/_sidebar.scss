@@ -8,6 +8,14 @@
     justify-content: center;
 
 
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+
+        justify-content: flex-end;
+    }
+
+
     &__nav {
         color: #fff;
         width: 4.5rem;
@@ -38,5 +46,21 @@
 
     &__nav::after {
         transform: translateY(1.3rem);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        &__nav {
+            
+            margin-top: 0;
+    
+        }
+
+        &__nav::before {
+            transform: translateY(-1.2rem);
+        }
+    
+        &__nav::after {
+            transform: translateY(1rem);
+        }
     }
 }
